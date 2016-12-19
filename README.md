@@ -3,6 +3,7 @@
 Create a `docker-compose.override.yml` and set the database password and expose
 any ports you may require.
 
+    version: '2'
     services:
       web:
         ports:
