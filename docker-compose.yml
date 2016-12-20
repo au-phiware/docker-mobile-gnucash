@@ -13,11 +13,11 @@ services:
   api:
     build: api
     links:
-      - mysql
+      - database
     networks:
       - gnucash
 
-  mysql:
+  database:
     image: mariadb:latest
     environment:
       - MYSQL_DATABASE=gnucash
@@ -33,7 +33,7 @@ services:
     environment:
       - DISPLAY=${DISPLAY}
     links:
-      - mysql
+      - database
     networks:
       - gnucash
 

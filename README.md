@@ -9,7 +9,7 @@ any ports and/or volumes you may require.
         ports:
           - 80:80
           - 443:443
-      mysql:
+      database:
         environment:
           - 'MYSQL_PASSWORD=**secret**'
           - MYSQL_RANDOM_ROOT_PASSWORD=yes
