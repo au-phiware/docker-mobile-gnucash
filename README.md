@@ -1,7 +1,7 @@
 # Usage
 
-Create a `docker-compose.override.yml` and set the database password and expose
-any ports you may require.
+Create a `docker-compose.override.yml` and set the database passwords and expose
+any ports and/or volumes you may require.
 
     version: '2'
     services:
@@ -12,6 +12,7 @@ any ports you may require.
       mysql:
         environment:
           - 'MYSQL_PASSWORD=**secret**'
+          - MYSQL_RANDOM_ROOT_PASSWORD=yes
         volumes:
           - /path/to/storage:/var/lib/mysql
         ports:
